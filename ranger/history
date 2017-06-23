@@ -1,0 +1,21 @@
+s
+set
+mkdir i3status
+touch config
+open_withan
+rename wallpaper.jpg
+mkdir wallpapers
+w
+open_withg
+mkdir screenshots
+touch index.html
+open_with atom
+open_with 
+open_with atool
+rename kk-master.zip
+
+set show_hidden true
+delete
+rename vue-front
+rename node-server
+rename vue-express

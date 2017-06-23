@@ -1,0 +1,21 @@
+[global_config]
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#fafafa"
+    cursor_color = "#ff6a00"
+    font = Ubuntu Mono 20
+    foreground_color = "#5c6773"
+    icon_bell = False
+    palette = "#000000:#ff3333:#86b300:#f29718:#41a6d9:#f07178:#4dbf99:#ffffff:#323232:#ff6565:#b8e532:#ffc94a:#73d8ff:#ffa3aa:#7ff1cb:#ffffff"
+    show_titlebar = False
+    use_system_font = False
