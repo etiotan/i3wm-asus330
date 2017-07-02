@@ -132,8 +132,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="Chromium"] $workspace1
 assign [class="Terminator"] $workspace2
 assign [class="Atom"] $workspace3
-assign [class="Thunar"] $workspace4
-assign [class="Gthumb|MPlayer|mpv|vlc|qpdfview|Xfburn|Pitivi|Popcorntime|Gmusicbrowser|Ogmrip|Spotify"] $workspace5
+assign [class="Gthumb|MPlayer|mpv|vlc|qpdfview|Xfburn|Pitivi|Popcorntime|Gmusicbrowser|Ogmrip|Spotify"] $workspace4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -262,3 +261,10 @@ new_window 1pixel
 # Polybar
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Resize
+
+bindsym $mod+Ctrl+Right resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+Up resize grow height 5 px or 5 ppt
+bindsym $mod+Ctrl+Down resize shrink height 5 px or 5 ppt
+bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
