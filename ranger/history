@@ -1,21 +1,50 @@
-s
-set
-mkdir i3status
-touch config
-open_withan
-rename wallpaper.jpg
-mkdir wallpapers
-w
-open_withg
-mkdir screenshots
-touch index.html
-open_with atom
-open_with 
-open_with atool
-rename kk-master.zip
+rename compresspng.zip
+rename compresspnq.zip
+mkdir issues-jun-26-17
+touch issues.md
+open_with vim
+rename issues.md
+rename issue.md
+shell atom issues.md
+rename vue-basics
+mkdir vue-practice
+search http
+shell vim httpd.conf
+search sudo
+shell sudo sudoers.d
+open_with
+search mysql
+shell sudo rm -r mysql
+rename index.php
+search host
+mkdir 1
+shell cat *.sql > 1.sql
+u
+mkdir 2
+shell cat *.sql > 2.sql
+mkdir 3
+shell cat *.sql > 3.sql
+shell atom .
+shell ls -ld 
+search httpd
+shell ~
+search php
+mkdir arch-ink
+touch README.md
+open_with atom 
+shell git init
 
-set show_hidden true
+shell sudo vim httpd.conf
+rename cake2.6.1
+search php56
+open_with 
+shell sudo rm composer
+search poly
+search .poly
+mkdir polybar
+mkdir launch.sh
+shell install -Dm644 /usr/share/doc/polybar/config $HOME/.config/polybar/config
+shell polybar example
 delete
-rename vue-front
-rename node-server
-rename vue-express
+touch launch.sh
+set show_hidden true

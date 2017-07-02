@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 
-font pango:Ubuntu 12
+font pango:Source Code Pro 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -30,9 +30,10 @@ font pango:Ubuntu 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
+# custom application starters
 bindsym $mod+Return exec terminator
 bindsym $mod+Shift+Return exec chromium
+bindsym $mod+Shift+f exec thunar
 
 # kill focused windowq
 bindsym $mod+Shift+q kill
@@ -96,17 +97,18 @@ bindsym $mod+a focus parent
 
 # workspace Vars
 
-set $workspace1 "Browser"
-set $workspace2 "Terminator"
-set $workspace3 "Atom"
-set $workspace4 "Media"
+set $workspace1 1
+set $workspace2 2
+set $workspace3 3
+set $workspace4 4
+set $workspace5 5
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -118,7 +120,7 @@ bindsym $mod+Shift+1 move container to workspace $workspace1
 bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $workspace5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -130,7 +132,8 @@ bindsym $mod+Shift+0 move container to workspace 10
 assign [class="Chromium"] $workspace1
 assign [class="Terminator"] $workspace2
 assign [class="Atom"] $workspace3
-assign [class="Gthumb|MPlayer|mpv|Xfburn|Pitivi|Popcorntime|Gmusicbrowser|Ogmrip|Spotify"] $workspace4
+assign [class="Thunar"] $workspace4
+assign [class="Gthumb|MPlayer|mpv|vlc|qpdfview|Xfburn|Pitivi|Popcorntime|Gmusicbrowser|Ogmrip|Spotify"] $workspace5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -205,21 +208,21 @@ hide_edge_borders both
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-  position top
-  status_command i3status
-	colors {
-        	background          $grey
-        	statusline          $mgrey
-		      separator	          $grey
-        	#separator           $lgrey
-		#		    border	background   text
-        	focused_workspace   $grey       $grey        $white
-        	active_workspace    $grey       $grey        $mgrey
-        	inactive_workspace  $grey       $grey        $mgrey
-        	urgent_workspace    $grey        $blue        $white
-    }
-}
+
+#bar {
+# position top
+#  status_command i3status
+#	colors {
+#        	background          $grey
+#        	statusline          $mgrey
+#		      separator	          $grey
+#        	#separator          $lgrey	border	background   text
+#        	focused_workspace   $grey       $grey        $white
+#        	active_workspace    $grey       $grey        $mgrey
+#        	inactive_workspace  $grey       $grey        $mgrey
+#        	urgent_workspace    $grey       $blue        $white
+#    }
+#}
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -245,15 +248,17 @@ bindsym --release $mod+Print exec "scrot '/home/swoo/Pictures/screenshots/%s_%H%
 
 # Start Up
 
+exec_always xrandr --dpi 170
 exec redshift -t 3400:3400
 exec chromium
 exec terminator
-exec xrandr --dpi 170
-exec --no-start-up-id nm-applet
 exec_always feh --bg-scale /home/swoo/Pictures/wallpapers/wallpaper.jpg
-
 
 # No Titlebar
 
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
+
+# Polybar
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
