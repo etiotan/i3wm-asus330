@@ -40,7 +40,7 @@ font-0 = Source Code Pro:size=11;3
 
 modules-left = i3
 modules-center = 
-modules-right = volume battery temperature date
+modules-right = volume battery date
 
 tray-position = right
 tray-padding = 2
@@ -203,9 +203,10 @@ format-volume-padding = 1
 format-volume = <ramp-volume> <label-volume>
 format-volume-background = #d1c4e9
 label-muted = MUTE
+format-muted-padding = 1
 label-muted-foreground = ${colors.foreground}
 label-muted-background = #ff9e80
-ramp-volume-0 = VOL
+ramp-volume-0 = v
 
 [module/battery]
 type = internal/battery
@@ -217,9 +218,10 @@ format-charging-background = #ccff90
 format-discharging = <label-discharging>
 format-discharging-background = #fff9c4
 format-discharging-padding = 1
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground}
-
+label-full = MAX
+format-full-foreground = ${colors.foreground}
+format-full-background = #aeea00 
+format-full-padding = 1
 ramp-capacity-foreground = ${colors.foreground}
 
 animation-charging-0 = 

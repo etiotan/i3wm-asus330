@@ -1,50 +1,50 @@
-rename compresspng.zip
-rename compresspnq.zip
-mkdir issues-jun-26-17
-touch issues.md
-open_with vim
-rename issues.md
-rename issue.md
-shell atom issues.md
-rename vue-basics
-mkdir vue-practice
-search http
-shell vim httpd.conf
-search sudo
-shell sudo sudoers.d
-open_with
-search mysql
-shell sudo rm -r mysql
-rename index.php
-search host
-mkdir 1
-shell cat *.sql > 1.sql
-u
-mkdir 2
-shell cat *.sql > 2.sql
-mkdir 3
-shell cat *.sql > 3.sql
-shell atom .
-shell ls -ld 
-search httpd
-shell ~
-search php
-mkdir arch-ink
-touch README.md
-open_with atom 
+rename wallpaperastronautwhite.jpg
+rename wallpapertempleshrine.jpg
+rename wallpapermountainbluish.jpg
+rename wallpaper.jpg
+set show_hidden
+shell git add .
+shell git commit -m "new"
+shell 
+search git
+rename cyanlake.jpg
+shell atool -a wallpapers
+shell atool wallpapers.tar.gz all-wallpapers
+shell acat wallpapers.tar.gz wallpapers
+shell atool -x wallpapers.tar.gz
+shell apack .
+shell apack . wallpapers
 shell git init
-
-shell sudo vim httpd.conf
-rename cake2.6.1
-search php56
+atom .
+shell atom .
+rename ink-front-end
+de
 open_with 
-shell sudo rm composer
-search poly
-search .poly
-mkdir polybar
-mkdir launch.sh
-shell install -Dm644 /usr/share/doc/polybar/config $HOME/.config/polybar/config
-shell polybar example
-delete
-touch launch.sh
+open_with atom
+rename test.sass
+rename bulma
+mkdir haskell
+touch 1.hs
+shell atom 1.hs
+touch php.ini
+open_with vim
+rename php-cs-fixer
+shell sudo chmod a+x php-cs-fixer
+mkdir .todolist
+rename .todo
+mkdir config
+search .z
+w
+rename todo.cfg
+rename config
+search todo
+shell chmod +x todo.sh
+shell chmod -777 todo.txt
+shell chmod -777 done.txt
+shell chmod -777 report.txt
+touch todo.txt
+shell sudo chmod -R 777 .
+
 set show_hidden true
+delete
+shell git clone https://github.com/marwaybs/inkblotFront.git
